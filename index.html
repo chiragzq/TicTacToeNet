@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <canvas id="canvas" width="600" height="600"></canvas> <br />
+  <button onClick="runGame()" id="rungame">Run Game</button>
+  <button onClick="runMultiple(100)" id="runMultiple">Run 100</button>
+  <button onClick="runMultiple(document.getElementById('times').value)" id="runcustom">Run</button> <input type="number" id="times" size="3"/><br />
+  <button onClick="resetCounts()" id="resetCounts">Reset Counts</button>
+  <button onClick="kill=true">Stop</button>
+  
+  <p id="counter"></p>
+  <p>Red Player: <select id="redplayer">
+    <option value="0">Random Player</option>
+    <option value="1">Table Player</option>
+    <option value="2">Neural Player</option>
+  </select> </p>
+ 
+  <p>Blue Player: <select id="blueplayer">
+    <option value="0">Random Player</option>
+    <option value="1">Table Player</option>
+    <option value="2">Neural Player</option>
+  </select> </p>
+  <button onclick="resetPlayerData()" id="resetplayerdata">Reset all player data</button>
+  <script src="deeplearn.js"></script>
+  <script src="deep3.js"> </script>
+  <script src="player.js"></script>
+  <script src="neuralnet.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
